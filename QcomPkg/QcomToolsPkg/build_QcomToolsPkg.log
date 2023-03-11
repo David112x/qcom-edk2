@@ -1,0 +1,230 @@
+Build environment: Linux-6.1.9-060109-generic-x86_64-with-Ubuntu-22.10-kinetic
+Build start time: 21:23:41, Mar.08 2023
+
+WORKSPACE        = /mnt/workspace/android-firmware-qti-sdm670/boot_images
+ECP_SOURCE       = /mnt/workspace/android-firmware-qti-sdm670/boot_images/EdkCompatibilityPkg
+EDK_SOURCE       = /mnt/workspace/android-firmware-qti-sdm670/boot_images/EdkCompatibilityPkg
+EFI_SOURCE       = /mnt/workspace/android-firmware-qti-sdm670/boot_images/EdkCompatibilityPkg
+EDK_TOOLS_PATH   = /mnt/workspace/android-firmware-qti-sdm670/boot_images/BaseTools
+
+
+Architecture(s)  = AARCH64
+Build target     = RELEASE
+Toolchain        = CLANG39LINUX
+
+Active Platform          = /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/QcomToolsPkg/QcomToolsPkg.dsc
+Flash Image Definition   = /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/QcomToolsPkg/QcomToolsPkg.fdf
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Library/PrintShLib/PrintShLib.inf [AARCH64]
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Library/TzRuntimeLib/TzRuntimeLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Library/CookieLib/CookieLib.inf [AARCH64]
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Library/NullLibs/BootConfigLibNull/BootConfigLibNull.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Library/UefiConfigLib/UefiCfgLib.inf [AARCH64]
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/MdeModulePkg/Library/DxePerformanceLib/DxePerformanceLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/MdePkg/Library/BaseIoLibIntrinsic/BaseIoLibIntrinsic.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Library/MountFvUtilsLib/MountFvUtilsLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Library/ProcLib/ProcLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/ArmPkg/Library/ArmCacheMaintenanceLib/ArmCacheMaintenanceLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/ArmPkg/Library/ArmLib/AArch64/AArch64Lib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/MdeModulePkg/Library/DxeReportStatusCodeLib/DxeReportStatusCodeLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/MdePkg/Library/BasePcdLibNull/BasePcdLibNull.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Library/ShLib/ShLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/MdeModulePkg/Library/PeiDxeDebugLibReportStatusCode/PeiDxeDebugLibReportStatusCode.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Library/QcomBaseLib/QcomBaseLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Library/GuidedFvLib/GuidedFvLib.inf [AARCH64]
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/MdePkg/Library/UefiDevicePathLib/UefiDevicePathLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/MdePkg/Library/UefiMemoryAllocationLib/UefiMemoryAllocationLib.inf [AARCH64]
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/ArmPkg/Library/BaseMemoryLibStm/BaseMemoryLibStm.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Library/QcomLib/QcomLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/MdePkg/Library/BaseLib/BaseLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/MdePkg/Library/UefiLib/UefiLib.inf [AARCH64]
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/MdePkg/Library/DxeExtractGuidedSectionLib/DxeExtractGuidedSectionLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/ArmPkg/Library/ArmGenericTimerPhyCounterLib/ArmGenericTimerPhyCounterLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/ArmPkg/Library/ArmArchTimerLib/ArmArchTimerLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/ArmPkg/Library/ArmMmuLib/ArmMmuBaseLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/MdePkg/Library/DxeHobLib/DxeHobLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/MdeModulePkg/Library/DxeDebugPrintErrorLevelLib/DxeDebugPrintErrorLevelLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/EmbeddedPkg/Library/EblNetworkLib/EblNetworkLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/ArmPkg/Library/UncachedMemoryAllocationLib/UncachedMemoryAllocationLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/MdeModulePkg/Library/LzmaCustomDecompressLib/LzmaCustomDecompressLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Library/ZlibDecompressLib/ZlibDecompressLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Library/SerialPortLib/SerialPortShLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Library/NullLibs/RandomStackCanaryLibNull/RandomStackCanaryLibNull.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/MdePkg/Library/UefiApplicationEntryPoint/UefiApplicationEntryPoint.inf [AARCH64]
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/EmbeddedPkg/Library/EfiFileLib/EfiFileLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Library/ParserLib/ParserLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Library/OfflineCrashDumpLib/OfflineCrashDumpDxeLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Library/MountFvLib/MountFvLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/ArmPkg/Library/CompilerIntrinsicsLib/CompilerIntrinsicsLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Library/StackCanaryBaseLib/StackCanaryBaseLibCore.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Library/MuslLib/MuslLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/QcomToolsPkg/CmdApp/CmdApp.inf [AARCH64]
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/QcomToolsPkg/ListVars/ListVars.inf [AARCH64]
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Library/QcomUtilsLib/QcomUtilsLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+make: Nothing to be done for 'tbuild'.
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/QcomToolsPkg/Pgm/Pgm.inf [AARCH64]
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/MdeModulePkg/Library/DxeNetLib/DxeNetLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Library/TestInterfaceLib/TestInterfaceLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/ArmPkg/Library/BdsLib/BdsLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Library/RpmbLib/RpmbLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Library/DALModEnvLib/DALModEnvLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/QcomToolsPkg/SecurityToggleApp/SecurityToggleApp.inf [AARCH64]
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Library/DALFwkLib/DALFwkLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/MdePkg/Library/BasePeCoffGetEntryPointLib/BasePeCoffGetEntryPointLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/ArmPkg/Library/ArmDisassemblerLib/ArmDisassemblerLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Library/EblCmdLib/EblCmdLib.inf [AARCH64]
+"/mnt/workspace/tc/3.9.1/bin/clang" -g -Os -fshort-wchar -fno-strict-aliasing -Wall -Werror -Wno-array-bounds -c -include AutoGen.h -mlittle-endian -fno-short-enums -fverbose-asm -funsigned-char -ffunction-sections -fdata-sections -fno-builtin -Wno-address -fno-asynchronous-unwind-tables -target aarch64-none-linux-gnu -fcolor-diagnostics -fdiagnostics-format=vi -Wno-parentheses-equality -Wno-tautological-compare -Wno-tautological-constant-out-of-range-compare -Wno-empty-body -Wno-unused-function -Wno-bitwise-op-parentheses -mcmodel=small -ffixed-x18 -mstrict-align -fstack-protector -fno-common -mtune=cortex-a53 -include /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Include/Library/DebugLib.h -DQCOM_EDK2_PATCH  -mstrict-align -Oz -DPRODMODE -o /mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/QcomPkg/Library/EblCmdLib/EblCmdLib/OUTPUT/./EblCmdLib.obj @/mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/QcomPkg/Library/EblCmdLib/EblCmdLib/OUTPUT/inc.lst /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Library/EblCmdLib/EblCmdLib.c
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/MdePkg/Library/BaseDebugPrintErrorLevelLib/BaseDebugPrintErrorLevelLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/MdePkg/Library/BasePrintLib/BasePrintLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/MdePkg/Library/UefiDebugLibConOut/UefiDebugLibConOut.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/MdeModulePkg/Library/UefiHiiServicesLib/UefiHiiServicesLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/MdeModulePkg/Library/UefiSortLib/UefiSortLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/MdeModulePkg/Library/UefiHiiLib/UefiHiiLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/MdePkg/Library/UefiFileHandleLib/UefiFileHandleLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/ShellPkg/Library/UefiShellLib/UefiShellLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/ShellPkg/Library/UefiHandleParsingLib/UefiHandleParsingLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/ShellPkg/Library/UefiShellCommandLib/UefiShellCommandLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/ShellPkg/Library/UefiShellBcfgCommandLib/UefiShellBcfgCommandLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/ShellPkg/Library/UefiShellLevel2CommandsLib/UefiShellLevel2CommandsLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/ShellPkg/Library/UefiShellLevel1CommandsLib/UefiShellLevel1CommandsLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/ShellPkg/Library/UefiShellLevel3CommandsLib/UefiShellLevel3CommandsLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/ShellPkg/Library/UefiShellDriver1CommandsLib/UefiShellDriver1CommandsLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+python /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Tools/esc_backslash.py /mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/QcomPkg/Library/EblCmdLib/EblCmdLib/OUTPUT/object_files.lst
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/ShellPkg/Library/UefiShellInstall1CommandsLib/UefiShellInstall1CommandsLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/ShellPkg/Library/UefiShellDebug1CommandsLib/UefiShellDebug1CommandsLib.inf [AARCH64]
+"/mnt/workspace/tc/3.9.1/tools/bin/arm-ar" -cr -D /mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/QcomPkg/Library/EblCmdLib/EblCmdLib/OUTPUT/QcomEblCmdLib.lib  @/mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/QcomPkg/Library/EblCmdLib/EblCmdLib/OUTPUT/object_files.lst
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/ShellPkg/Library/UefiShellNetwork1CommandsLib/UefiShellNetwork1CommandsLib.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/QcomToolsPkg/MenuApp/MenuApp.inf [AARCH64]
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/QcomToolsPkg/DelBootVars/DelBootVars.inf [AARCH64]
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/QcomToolsPkg/RPMBProvision/RPMBProvision.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/QcomToolsPkg/UEFINVErase/UEFINVErase.inf [AARCH64]
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/QcomToolsPkg/WinDsdtUpdateControllerUI/WinDsdtUpdateControllerUI.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+make: Nothing to be done for 'tbuild'.
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/EmbeddedPkg/Ebl/Ebl.inf [AARCH64]
+Building ... /mnt/workspace/android-firmware-qti-sdm670/boot_images/ShellPkg/Application/Shell/Shell.inf [AARCH64]
+make: Nothing to be done for 'tbuild'.
+"/mnt/workspace/tc/3.9.1/bin/clang" -g -Os -fshort-wchar -fno-strict-aliasing -Wall -Werror -Wno-array-bounds -c -include AutoGen.h -mlittle-endian -fno-short-enums -fverbose-asm -funsigned-char -ffunction-sections -fdata-sections -fno-builtin -Wno-address -fno-asynchronous-unwind-tables -target aarch64-none-linux-gnu -fcolor-diagnostics -fdiagnostics-format=vi -Wno-parentheses-equality -Wno-tautological-compare -Wno-tautological-constant-out-of-range-compare -Wno-empty-body -Wno-unused-function -Wno-bitwise-op-parentheses -mcmodel=small -ffixed-x18 -mstrict-align -fstack-protector -fno-common -mtune=cortex-a53 -include /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Include/Library/DebugLib.h -DQCOM_EDK2_PATCH  -mstrict-align -Oz -DPRODMODE -o /mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/EmbeddedPkg/Ebl/Ebl/OUTPUT/./Main.obj @/mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/EmbeddedPkg/Ebl/Ebl/OUTPUT/inc.lst /mnt/workspace/android-firmware-qti-sdm670/boot_images/EmbeddedPkg/Ebl/Main.c
+make: Nothing to be done for 'tbuild'.
+"/mnt/workspace/tc/3.9.1/bin/clang" -g -Os -fshort-wchar -fno-strict-aliasing -Wall -Werror -Wno-array-bounds -c -include AutoGen.h -mlittle-endian -fno-short-enums -fverbose-asm -funsigned-char -ffunction-sections -fdata-sections -fno-builtin -Wno-address -fno-asynchronous-unwind-tables -target aarch64-none-linux-gnu -fcolor-diagnostics -fdiagnostics-format=vi -Wno-parentheses-equality -Wno-tautological-compare -Wno-tautological-constant-out-of-range-compare -Wno-empty-body -Wno-unused-function -Wno-bitwise-op-parentheses -mcmodel=small -ffixed-x18 -mstrict-align -fstack-protector -fno-common -mtune=cortex-a53 -include /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Include/Library/DebugLib.h -DQCOM_EDK2_PATCH  -mstrict-align -Oz -DPRODMODE -o /mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/EmbeddedPkg/Ebl/Ebl/OUTPUT/./Command.obj @/mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/EmbeddedPkg/Ebl/Ebl/OUTPUT/inc.lst /mnt/workspace/android-firmware-qti-sdm670/boot_images/EmbeddedPkg/Ebl/Command.c
+"/mnt/workspace/tc/3.9.1/bin/clang" -g -Os -fshort-wchar -fno-strict-aliasing -Wall -Werror -Wno-array-bounds -c -include AutoGen.h -mlittle-endian -fno-short-enums -fverbose-asm -funsigned-char -ffunction-sections -fdata-sections -fno-builtin -Wno-address -fno-asynchronous-unwind-tables -target aarch64-none-linux-gnu -fcolor-diagnostics -fdiagnostics-format=vi -Wno-parentheses-equality -Wno-tautological-compare -Wno-tautological-constant-out-of-range-compare -Wno-empty-body -Wno-unused-function -Wno-bitwise-op-parentheses -mcmodel=small -ffixed-x18 -mstrict-align -fstack-protector -fno-common -mtune=cortex-a53 -include /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Include/Library/DebugLib.h -DQCOM_EDK2_PATCH  -mstrict-align -Oz -DPRODMODE -o /mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/EmbeddedPkg/Ebl/Ebl/OUTPUT/./EfiDevice.obj @/mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/EmbeddedPkg/Ebl/Ebl/OUTPUT/inc.lst /mnt/workspace/android-firmware-qti-sdm670/boot_images/EmbeddedPkg/Ebl/EfiDevice.c
+"/mnt/workspace/tc/3.9.1/bin/clang" -g -Os -fshort-wchar -fno-strict-aliasing -Wall -Werror -Wno-array-bounds -c -include AutoGen.h -mlittle-endian -fno-short-enums -fverbose-asm -funsigned-char -ffunction-sections -fdata-sections -fno-builtin -Wno-address -fno-asynchronous-unwind-tables -target aarch64-none-linux-gnu -fcolor-diagnostics -fdiagnostics-format=vi -Wno-parentheses-equality -Wno-tautological-compare -Wno-tautological-constant-out-of-range-compare -Wno-empty-body -Wno-unused-function -Wno-bitwise-op-parentheses -mcmodel=small -ffixed-x18 -mstrict-align -fstack-protector -fno-common -mtune=cortex-a53 -include /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Include/Library/DebugLib.h -DQCOM_EDK2_PATCH  -mstrict-align -Oz -DPRODMODE -o /mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/EmbeddedPkg/Ebl/Ebl/OUTPUT/./HwDebug.obj @/mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/EmbeddedPkg/Ebl/Ebl/OUTPUT/inc.lst /mnt/workspace/android-firmware-qti-sdm670/boot_images/EmbeddedPkg/Ebl/HwDebug.c
+"/mnt/workspace/tc/3.9.1/bin/clang" -g -Os -fshort-wchar -fno-strict-aliasing -Wall -Werror -Wno-array-bounds -c -include AutoGen.h -mlittle-endian -fno-short-enums -fverbose-asm -funsigned-char -ffunction-sections -fdata-sections -fno-builtin -Wno-address -fno-asynchronous-unwind-tables -target aarch64-none-linux-gnu -fcolor-diagnostics -fdiagnostics-format=vi -Wno-parentheses-equality -Wno-tautological-compare -Wno-tautological-constant-out-of-range-compare -Wno-empty-body -Wno-unused-function -Wno-bitwise-op-parentheses -mcmodel=small -ffixed-x18 -mstrict-align -fstack-protector -fno-common -mtune=cortex-a53 -include /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Include/Library/DebugLib.h -DQCOM_EDK2_PATCH  -mstrict-align -Oz -DPRODMODE -o /mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/EmbeddedPkg/Ebl/Ebl/OUTPUT/./HwIoDebug.obj @/mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/EmbeddedPkg/Ebl/Ebl/OUTPUT/inc.lst /mnt/workspace/android-firmware-qti-sdm670/boot_images/EmbeddedPkg/Ebl/HwIoDebug.c
+"/mnt/workspace/tc/3.9.1/bin/clang" -g -Os -fshort-wchar -fno-strict-aliasing -Wall -Werror -Wno-array-bounds -c -include AutoGen.h -mlittle-endian -fno-short-enums -fverbose-asm -funsigned-char -ffunction-sections -fdata-sections -fno-builtin -Wno-address -fno-asynchronous-unwind-tables -target aarch64-none-linux-gnu -fcolor-diagnostics -fdiagnostics-format=vi -Wno-parentheses-equality -Wno-tautological-compare -Wno-tautological-constant-out-of-range-compare -Wno-empty-body -Wno-unused-function -Wno-bitwise-op-parentheses -mcmodel=small -ffixed-x18 -mstrict-align -fstack-protector -fno-common -mtune=cortex-a53 -include /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Include/Library/DebugLib.h -DQCOM_EDK2_PATCH  -mstrict-align -Oz -DPRODMODE -o /mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/EmbeddedPkg/Ebl/Ebl/OUTPUT/./Dir.obj @/mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/EmbeddedPkg/Ebl/Ebl/OUTPUT/inc.lst /mnt/workspace/android-firmware-qti-sdm670/boot_images/EmbeddedPkg/Ebl/Dir.c
+"/mnt/workspace/tc/3.9.1/bin/clang" -g -Os -fshort-wchar -fno-strict-aliasing -Wall -Werror -Wno-array-bounds -c -include AutoGen.h -mlittle-endian -fno-short-enums -fverbose-asm -funsigned-char -ffunction-sections -fdata-sections -fno-builtin -Wno-address -fno-asynchronous-unwind-tables -target aarch64-none-linux-gnu -fcolor-diagnostics -fdiagnostics-format=vi -Wno-parentheses-equality -Wno-tautological-compare -Wno-tautological-constant-out-of-range-compare -Wno-empty-body -Wno-unused-function -Wno-bitwise-op-parentheses -mcmodel=small -ffixed-x18 -mstrict-align -fstack-protector -fno-common -mtune=cortex-a53 -include /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Include/Library/DebugLib.h -DQCOM_EDK2_PATCH  -mstrict-align -Oz -DPRODMODE -o /mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/EmbeddedPkg/Ebl/Ebl/OUTPUT/./Hob.obj @/mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/EmbeddedPkg/Ebl/Ebl/OUTPUT/inc.lst /mnt/workspace/android-firmware-qti-sdm670/boot_images/EmbeddedPkg/Ebl/Hob.c
+"/mnt/workspace/tc/3.9.1/bin/clang" -g -Os -fshort-wchar -fno-strict-aliasing -Wall -Werror -Wno-array-bounds -c -include AutoGen.h -mlittle-endian -fno-short-enums -fverbose-asm -funsigned-char -ffunction-sections -fdata-sections -fno-builtin -Wno-address -fno-asynchronous-unwind-tables -target aarch64-none-linux-gnu -fcolor-diagnostics -fdiagnostics-format=vi -Wno-parentheses-equality -Wno-tautological-compare -Wno-tautological-constant-out-of-range-compare -Wno-empty-body -Wno-unused-function -Wno-bitwise-op-parentheses -mcmodel=small -ffixed-x18 -mstrict-align -fstack-protector -fno-common -mtune=cortex-a53 -include /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Include/Library/DebugLib.h -DQCOM_EDK2_PATCH  -mstrict-align -Oz -DPRODMODE -o /mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/EmbeddedPkg/Ebl/Ebl/OUTPUT/./Script.obj @/mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/EmbeddedPkg/Ebl/Ebl/OUTPUT/inc.lst /mnt/workspace/android-firmware-qti-sdm670/boot_images/EmbeddedPkg/Ebl/Script.c
+"/mnt/workspace/tc/3.9.1/bin/clang" -g -Os -fshort-wchar -fno-strict-aliasing -Wall -Werror -Wno-array-bounds -c -include AutoGen.h -mlittle-endian -fno-short-enums -fverbose-asm -funsigned-char -ffunction-sections -fdata-sections -fno-builtin -Wno-address -fno-asynchronous-unwind-tables -target aarch64-none-linux-gnu -fcolor-diagnostics -fdiagnostics-format=vi -Wno-parentheses-equality -Wno-tautological-compare -Wno-tautological-constant-out-of-range-compare -Wno-empty-body -Wno-unused-function -Wno-bitwise-op-parentheses -mcmodel=small -ffixed-x18 -mstrict-align -fstack-protector -fno-common -mtune=cortex-a53 -include /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Include/Library/DebugLib.h -DQCOM_EDK2_PATCH  -mstrict-align -Oz -DPRODMODE -o /mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/EmbeddedPkg/Ebl/Ebl/OUTPUT/./Network.obj @/mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/EmbeddedPkg/Ebl/Ebl/OUTPUT/inc.lst /mnt/workspace/android-firmware-qti-sdm670/boot_images/EmbeddedPkg/Ebl/Network.c
+"/mnt/workspace/tc/3.9.1/bin/clang" -g -Os -fshort-wchar -fno-strict-aliasing -Wall -Werror -Wno-array-bounds -c -include AutoGen.h -mlittle-endian -fno-short-enums -fverbose-asm -funsigned-char -ffunction-sections -fdata-sections -fno-builtin -Wno-address -fno-asynchronous-unwind-tables -target aarch64-none-linux-gnu -fcolor-diagnostics -fdiagnostics-format=vi -Wno-parentheses-equality -Wno-tautological-compare -Wno-tautological-constant-out-of-range-compare -Wno-empty-body -Wno-unused-function -Wno-bitwise-op-parentheses -mcmodel=small -ffixed-x18 -mstrict-align -fstack-protector -fno-common -mtune=cortex-a53 -include /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Include/Library/DebugLib.h -DQCOM_EDK2_PATCH  -mstrict-align -Oz -DPRODMODE -o /mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/EmbeddedPkg/Ebl/Ebl/OUTPUT/./Variable.obj @/mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/EmbeddedPkg/Ebl/Ebl/OUTPUT/inc.lst /mnt/workspace/android-firmware-qti-sdm670/boot_images/EmbeddedPkg/Ebl/Variable.c
+python /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Tools/esc_backslash.py /mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/EmbeddedPkg/Ebl/Ebl/OUTPUT/object_files.lst
+"/mnt/workspace/tc/3.9.1/tools/bin/arm-ar" -cr -D /mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/EmbeddedPkg/Ebl/Ebl/OUTPUT/Ebl.lib  @/mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/EmbeddedPkg/Ebl/Ebl/OUTPUT/object_files.lst
+"/mnt/workspace/tc/3.9.1/bin/arm-link" -o /mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/EmbeddedPkg/Ebl/Ebl/DEBUG/Ebl.dll -Ttext=0x0 --emit-relocs -nostdlib --gc-sections -u _QCModuleEntry -e _QCModuleEntry -Map /mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/EmbeddedPkg/Ebl/Ebl/DEBUG/Ebl.map -march=aarch64 -z max-page-size=0x1000 --start-group  @/mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/EmbeddedPkg/Ebl/Ebl/OUTPUT/static_library_files.lst --end-group --script=/mnt/workspace/android-firmware-qti-sdm670/boot_images/BaseTools/Scripts/GccBase.lds --defsym=PECOFF_HEADER_SIZE=0x280
+python /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Tools/gcc_map.py /mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/EmbeddedPkg/Ebl/Ebl/DEBUG/Ebl.map > /mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/EmbeddedPkg/Ebl/Ebl/DEBUG/Ebl.map.txt
+cp -f /mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/EmbeddedPkg/Ebl/Ebl/DEBUG/Ebl.dll /mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/EmbeddedPkg/Ebl/Ebl/DEBUG/Ebl.debug
+cp -f /mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/EmbeddedPkg/Ebl/Ebl/DEBUG/*.map /mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/EmbeddedPkg/Ebl/Ebl/OUTPUT
+GenFw -e UEFI_APPLICATION -o /mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/EmbeddedPkg/Ebl/Ebl/DEBUG/Ebl.efi /mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/EmbeddedPkg/Ebl/Ebl/DEBUG/Ebl.dll
+cp -f /mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/EmbeddedPkg/Ebl/Ebl/DEBUG/Ebl.efi /mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/EmbeddedPkg/Ebl/Ebl/OUTPUT
+cp -f /mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64/EmbeddedPkg/Ebl/Ebl/DEBUG/Ebl.efi /mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/AARCH64
+Fd File Name:QCOMTOOLS_EFI
+
+Generate Region at Offset 0x0
+   Region Size = 0x60000
+   Region Name = FV
+
+Generating FVMAIN_COMPACT FV
+
+Generating FVMAIN FV
+###########
+Generate Region at Offset 0x0
+   Region Size = 0x60000
+   Region Name = FV
+
+GUID cross reference file can be found at /mnt/workspace/android-firmware-qti-sdm670/boot_images/Build/QcomTools/RELEASE_CLANG39LINUX/FV/Guid.xref
+
+FV Space Information
+FVMAIN_COMPACT [81%Full] 393216 total, 320728 used, 72488 free
+FVMAIN [99%Full] 1531072 total, 1531016 used, 56 free
+
+- Done -
+Build end time: 21:23:51, Mar.08 2023
+Build total time: 00:00:10
+

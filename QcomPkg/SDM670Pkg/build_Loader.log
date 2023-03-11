@@ -1,0 +1,18 @@
+Build environment: Linux-6.1.9-060109-generic-x86_64-with-Ubuntu-22.10-kinetic
+Build start time: 21:26:46, Mar.08 2023
+
+WORKSPACE        = /mnt/workspace/android-firmware-qti-sdm670/boot_images
+ECP_SOURCE       = /mnt/workspace/android-firmware-qti-sdm670/boot_images/EdkCompatibilityPkg
+EDK_SOURCE       = /mnt/workspace/android-firmware-qti-sdm670/boot_images/EdkCompatibilityPkg
+EFI_SOURCE       = /mnt/workspace/android-firmware-qti-sdm670/boot_images/EdkCompatibilityPkg
+EDK_TOOLS_PATH   = /mnt/workspace/android-firmware-qti-sdm670/boot_images/BaseTools
+
+
+build.py...
+ : error 000E: File/directory not found in workspace
+	/mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/SDM670Pkg/Loader.dsc
+
+- Failed -
+Build end time: 21:26:46, Mar.08 2023
+Build total time: 00:00:00
+

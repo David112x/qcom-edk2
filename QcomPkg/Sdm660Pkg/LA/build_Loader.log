@@ -1,0 +1,25 @@
+Build environment: Linux-6.1.9-060109-generic-x86_64-with-Ubuntu-22.10-kinetic
+Build start time: 08:52:18, Mar.09 2023
+
+WORKSPACE        = /mnt/workspace/android-firmware-qti-sdm670/boot_images
+ECP_SOURCE       = /mnt/workspace/android-firmware-qti-sdm670/boot_images/EdkCompatibilityPkg
+EDK_SOURCE       = /mnt/workspace/android-firmware-qti-sdm670/boot_images/EdkCompatibilityPkg
+EFI_SOURCE       = /mnt/workspace/android-firmware-qti-sdm670/boot_images/EdkCompatibilityPkg
+EDK_TOOLS_PATH   = /mnt/workspace/android-firmware-qti-sdm670/boot_images/BaseTools
+
+
+Architecture(s)  = AARCH64
+Build target     = DEBUG
+Toolchain        = CLANG39LINUX
+
+Active Platform          = /mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Sdm660Pkg/LA/Loader.dsc
+
+
+build.py...
+/mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Sdm660Pkg/LA/Loader.dsc(126): error 000E: File/directory not found in workspace
+	/mnt/workspace/android-firmware-qti-sdm670/boot_images/QcomPkg/Library/HotplugLib/HotPlugLib.inf
+
+- Failed -
+Build end time: 08:52:19, Mar.09 2023
+Build total time: 00:00:01
+
