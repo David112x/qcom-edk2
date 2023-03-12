@@ -1,34 +1,16 @@
-#/** @file QcomPkg.dec
-#  
-#  Qualcomm package declaration file.
-#  
-#  Copyright (c) 2011-2017, Qualcomm Technologies, Inc. All Rights Reserved.
-#  Qualcomm Technologies Proprietary and Confidential.
-#
-#**/
-
 [Defines]
-  DEC_SPECIFICATION              = 0x00010005
+  DEC_SPECIFICATION              = 0x0001001A
   PACKAGE_NAME                   = QcomPkg
-  PACKAGE_GUID                   = 8F99F539-2EE4-4A97-BD6E-FA412A26A06A
-  PACKAGE_VERSION                = 0.1
+  PACKAGE_GUID                   = e2b3780c-ed78-4c34-ad58-c66d806f7ec5
+  PACKAGE_VERSION                = 1.0
 
-################################################################################
-#
-# Include Section - list of Include Paths that are provided by this package.
-#                   Comments are used for Keywords and Module Types.
-#
-# Supported Module Types:
-#  BASE SEC PEI_CORE PEIM DXE_CORE DXE_DRIVER DXE_RUNTIME_DRIVER DXE_SMM_DRIVER DXE_SAL_DRIVER UEFI_DRIVER UEFI_APPLICATION
-#
-################################################################################
-[Includes.common]
-  Include                        # Root include for the package
+[Includes]
+  Include
   Include/Library
   Include/api/dal
   Include/api/boot
   Include/api/kernel/HALIOMMU
-  Library/MuslLib/musl/include
+  GPLDrivers/Include
 
 [Includes.ARM]
   Library/MuslLib/musl/arch/arm
@@ -36,7 +18,7 @@
 [Includes.AARCH64]
   Library/MuslLib/musl/arch/aarch64
 
-[Guids.common]
+[Guids]
   gQcomTokenSpaceGuid =                 { 0x882f8c2b, 0x9646, 0x435f, { 0x8d, 0xe5, 0xf2, 0x08, 0xff, 0x80, 0xc1, 0xbd } }
   gEfiOSConfigGuid =                    { 0xd5cf1c38, 0xb00b, 0x4bce, { 0x8f, 0xf3, 0x5d, 0xa6, 0xfe, 0xd0, 0x8e, 0x88 } }
   gEfiPartitionTypeGuid =               { 0x6848de61, 0xeb61, 0x4def, { 0x9a, 0x8e, 0x38, 0x17, 0xcb, 0xeb, 0x8f, 0x1c } }
@@ -62,8 +44,8 @@
   gMainFvGuid =                         { 0x631008b0, 0xb2d1, 0x410a, { 0x8b, 0x49, 0x2c, 0x5c, 0x4d, 0x8e, 0xcc, 0x7e } }
   gToolsFvGuid =                        { 0xc4be3b58, 0x1c19, 0x4881, { 0xb1, 0x01, 0x8d, 0x02, 0xfc, 0xe6, 0x70, 0x8b } }
   gTestsFvGuid =                        { 0x87e6cc53, 0xa9a7, 0x4a49, { 0xa7, 0x35, 0x45, 0x14, 0x72, 0xe7, 0x0f, 0x83 } }
-  gImageFvGuid =                        { 0xa8169396, 0xd0f7, 0x49cb, { 0x89, 0x0a, 0x25, 0xe1, 0xa9, 0x76, 0x74, 0x06 } }    
-  gSocPlatTestsFvGuid =                 { 0x8fc1aca2, 0x9825, 0x4767, { 0x8f, 0x42, 0x55, 0x3d, 0x02, 0x71, 0x09, 0x28 } }  
+  gImageFvGuid =                        { 0xa8169396, 0xd0f7, 0x49cb, { 0x89, 0x0a, 0x25, 0xe1, 0xa9, 0x76, 0x74, 0x06 } }
+  gSocPlatTestsFvGuid =                 { 0x8fc1aca2, 0x9825, 0x4767, { 0x8f, 0x42, 0x55, 0x3d, 0x02, 0x71, 0x09, 0x28 } }
   gDaltfTestsFvGuid =                   { 0x0bd0cb86, 0x72d0, 0x4fc8, { 0xbb, 0x43, 0x40, 0x89, 0x25, 0x73, 0xeb, 0x51 } }
   gMainCompactFvGuid =                  { 0xefd4c1d0, 0x9444, 0x4e2d, { 0x95, 0xca, 0x65, 0xdf, 0x16, 0x76, 0x3d, 0xc1 } }
   gToolsCompactFvGuid =                 { 0x40fd01a7, 0x5af4, 0x447f, { 0xb0, 0xcf, 0x28, 0x02, 0x39, 0x84, 0x7f, 0xc7 } }
@@ -83,7 +65,7 @@
   # Reset Reason Data
   gQcomResetReasonDataCaptureGuid     = { 0x8cc74056, 0x428f, 0x4a4a, { 0xa7 ,0xeb ,0x03 ,0x4e ,0x68 ,0xfc ,0x2c ,0x2a } }
 
-  # GPP Partition for Platform Applications 
+  # GPP Partition for Platform Applications
   gEfiPlatPartitionTypeGuid =           { 0x543c031a, 0x4cb6, 0x4897, { 0xbf, 0xfe, 0x4b, 0x48, 0x57, 0x68, 0xa8, 0xad } }
   gQcomMemoryInfoGuid =                 { 0xd9e0b333, 0xb2cf, 0x4bb0, { 0x9b, 0x56, 0xaa, 0x06, 0xbb, 0x0e, 0xd6, 0xfc } }
   gQcomProdmodeInfoGuid =               { 0xd5f8d706, 0xd602, 0x4f39, { 0x96, 0x9d, 0xa0, 0x4f, 0xe2, 0xbb, 0x7f, 0x61 } }
@@ -94,8 +76,8 @@
   # UpdateCapsule Support
   gQcomScatterGatherListHeaderGuid =    { 0x4416d533, 0x2a21, 0x427b, { 0x9c, 0x2f, 0xa9, 0x8c, 0xae, 0x3c, 0xc3, 0xd1 } }
   gUpdateCapsulePartitionGuid =         { 0xc80325ba, 0x7ec2, 0x4a30, { 0xb2, 0xf7, 0x18, 0xf6, 0x46, 0x08, 0x61, 0x85 } }
-  # QCOM Keypad Device Guid 
-  gQcomKeypadDeviceGuid =               { 0xd7f58a0e, 0xbed2, 0x4b5a, { 0xbb, 0x43, 0x8a, 0xb2, 0x3d, 0xd0, 0xe2, 0xb0 } } 
+  # QCOM Keypad Device Guid
+  gQcomKeypadDeviceGuid =               { 0xd7f58a0e, 0xbed2, 0x4b5a, { 0xbb, 0x43, 0x8a, 0xb2, 0x3d, 0xd0, 0xe2, 0xb0 } }
   gEfiRNGAlgRawGuid =                   { 0xe43176d7, 0xb6e8, 0x4827, { 0xb7, 0x84, 0x7f, 0xfd, 0xc4, 0xb6, 0x85, 0x61 } }
   # UEFI preallocated/reserved DDR mem region
   gEfiUEFIMemGuid =                     { 0x9158ee69, 0xf5b6, 0x4ad7, { 0xa4, 0x3d, 0x9d, 0x15, 0x19, 0x32, 0x8e, 0xfa } }
@@ -180,38 +162,52 @@
   #Guid for start USB hardware configuration
   gInitUsbControllerGuid              = { 0x1c0cffce, 0xfc8d, 0x4e44, { 0x8c, 0x78, 0x9c, 0x9e, 0x5b, 0x53, 0xd,  0x36 } }
 
-  
+
   gCapsuleUpdateConfigFormSetGuid     = { 0x16373e2e, 0x9020, 0x4b09, { 0xaf, 0xb7, 0xb8, 0x4e, 0xe3, 0x00, 0x7a, 0xc3 } }
- 
+
   gFmpSetImageConfigFormSetGuid       = { 0xab9823c2, 0x8fe2, 0x4396, { 0x88, 0xef, 0x15, 0x2e, 0xf2, 0x7f, 0x33, 0xb2 } }
 
   #Storage for BERT records from other firmware
   gBertPartitionGuid                  = { 0x0e444367, 0xf7db, 0x46b5, { 0x9b, 0xe7, 0x40, 0x39, 0x96, 0x65, 0x4f, 0x5c } }
-  
+
   NonStandardBootGuid                 = { 0xf6a8718b, 0x1707, 0x4ac8, { 0xa1, 0xa3, 0x17, 0xea, 0x97, 0x5f, 0xaa, 0xe7 } }
 
   # GUID for Log File to Fat
   gEfiLogFSPartitionGuid              = { 0xBC0330EB, 0x3410, 0x4951, { 0xA6, 0x17, 0x03, 0x89, 0x8D, 0xBE, 0x33, 0x72 } }
 
   gEfiQcBootVariablesGuid             = { 0x3e8954c9, 0xf738, 0x4ed6, { 0x8a, 0xd1, 0x22, 0x9e, 0x60, 0xe9, 0xb6, 0xc8 } }
-  # GUID for UEFI Factory Mode 
+  # GUID for UEFI Factory Mode
   gStickyGuid                         = { 0xaf02f6ad, 0xb602, 0x4873, { 0xb4, 0x28, 0xc,  0xa0, 0xe,  0xcd, 0x91, 0xed } }
   # BlockIO refresh after parition update
   gBlockIoRefreshGuid  =                { 0xb1eb3d10, 0x9d67, 0x40ca, { 0x95, 0x59, 0xf1, 0x48, 0x8b, 0x1b, 0x2d, 0xdb } }
-  
+
   #FV Guid for ABL Fv
   gEfiAblFvNameGuid                   = { 0x046fae99, 0xcf2e, 0x49ed, { 0xa6, 0xa8, 0xa1, 0x48, 0x8b, 0x7e, 0x80, 0xd3 } }
-  
+
   # Zlib
   gZlibDecompressGuid =                 { 0x1D301FE9, 0xBE79, 0x4353, { 0x91, 0xC2, 0xD2, 0x3B, 0xC9, 0x59, 0xAE, 0x0C } }
 
-  gDisplaySetModeSignalGuid =           { 0x29d73c39, 0x817e, 0x4610, { 0x91, 0xe5, 0x7b, 0x31, 0x88, 0x0d, 0x4e, 0x13 } } 
+  gDisplaySetModeSignalGuid =           { 0x29d73c39, 0x817e, 0x4610, { 0x91, 0xe5, 0x7b, 0x31, 0x88, 0x0d, 0x4e, 0x13 } }
 
   # PMIC Charger LPM data associated Guid
   gQcomChargerLpmDataGuid      =        { 0xa004ce52, 0x6f15, 0x46db, { 0xbe, 0x2d, 0x13, 0x1c, 0x62, 0x24, 0x91, 0x6c } }
 
-
 [Protocols]
+  gEfiMemCardInfoProtocolGuid       = { 0x85c1f7d2, 0xbce6, 0x4f31, { 0x8f, 0x4d, 0xd3, 0x7e, 0x03, 0xd0, 0x5e, 0xaa } }
+  gSynapticsTouchDeviceProtocolGuid = { 0xf6ba192f, 0x9ee4, 0x4e3b, { 0xb1, 0x7a, 0xda, 0x75, 0x40, 0x3f, 0xa5, 0xa7 } }
+  gQcomI2cProtocolGuid              = { 0xb27ae8b1, 0x3e10, 0x4d07, { 0xab, 0x5c, 0xeb, 0x9a, 0x6d, 0xc6, 0xfa, 0x8f } }
+  gQcomTlmmProtocolGuid             = { 0xad9aec18, 0x7bf0, 0x4809, { 0x9e, 0x96, 0x30, 0x12, 0x30, 0x9f, 0x3d, 0xf7 } }
+  gQcomTlmmRTProtocolGuid           = { 0xcc3f4da6, 0xa51e, 0x4fb7, { 0x98, 0xd1, 0xa0, 0x6e, 0xb8, 0x5d, 0x8e, 0x1e } }
+  gQcomPmicVregProtocolGuid         = { 0x22d38d3d, 0xe8b6, 0x4f8f, { 0x9c, 0x26, 0xbc, 0xeb, 0x07, 0xd6, 0xcb, 0x68 } }
+  gQcomSMEMProtocolGuid             = { 0xf4e5c7d0, 0xd239, 0x47cb, { 0xaa, 0xcd, 0x7f, 0x66, 0xef, 0x76, 0x32, 0x38 } }
+  # SCM
+  gQcomScmProtocolGuid              = { 0x77ed108d, 0x8524, 0x4b8b, { 0x9d, 0x2e, 0x34, 0x98, 0x7a, 0xec, 0xb9, 0xc1 } }
+  # ChipInfo
+  gEfiChipInfoProtocolGuid          = { 0xb0760469, 0x970c, 0x487a, { 0xa4, 0xb5, 0x28, 0xdb, 0x7b, 0x45, 0xce, 0xf1 } }
+  # PlatformInfo
+  gEfiPlatformInfoProtocolGuid      = { 0x157a5c45, 0x21b2, 0x43c5, { 0xba, 0x7c, 0x82, 0x2f, 0xee, 0x5f, 0xe5, 0x99 } }
+  # Clock
+  gEfiClockProtocolGuid             = { 0x241afae6, 0x885f, 0x4f6c, { 0xa7, 0xea, 0xc2, 0x8e, 0xab, 0x79, 0xc3, 0xe5 } }
   # HALIOMMU Protocol GUID
   gEfiHalIommuProtocolGuid =            { 0x54b6d3b4, 0x5d33, 0x4f91, { 0x86, 0x00, 0x6c, 0x41, 0xd5, 0xde, 0xb1, 0x9a } }
   # Qcom HW Interrupt
@@ -245,7 +241,7 @@
   # USB Serial
   gQcomUsbSerialIoProtocolGuid =        { 0x486bc39f, 0x96d2, 0x4452, { 0xab, 0xaa, 0xa1, 0x45, 0xc3, 0xc6, 0x91, 0xa1 } }
   # USB Charging
-  gQcomUsbChgDetProtocolGuid =          { 0xc4a954de, 0xd53a, 0x4585, { 0x85, 0x15, 0x6e, 0xbb, 0x6e, 0xdf, 0xda, 0x89 } } 
+  gQcomUsbChgDetProtocolGuid =          { 0xc4a954de, 0xd53a, 0x4585, { 0x85, 0x15, 0x6e, 0xbb, 0x6e, 0xdf, 0xda, 0x89 } }
   # Charger DXE
   gBatteryChargerProtocolGuid =         { 0x840cb643, 0x8198, 0x428a, { 0xa8, 0xb3, 0xa0, 0x72, 0xce, 0x57, 0xcd, 0xb9 } }
   # Charger Extension DXE
@@ -276,21 +272,21 @@
   gQcomPmicLpgProtocolGuid =            { 0xfe8d6a5b, 0xd34a, 0x476f, { 0xb9, 0x72, 0x63, 0xc8, 0x95, 0x12, 0x49, 0xa4 } }
   # PMIC Charger
   gQcomChargerProtocolGuid =            { 0x21bfb78b, 0x02ea, 0x4ab7, { 0x99, 0x40, 0xb5, 0x8a, 0x2a, 0xd6, 0x58, 0x29 } }
-  # PMIC USB 
-  gQcomPmicUsbProtocolGuid =            { 0x6adb9972, 0x83d, 0x4be4,  { 0xbb, 0x74, 0xc7, 0x25, 0xa7, 0x30, 0x61, 0x56 } }  
-  # PMIC FG 
-  gQcomPmicFgProtocolGuid =             { 0x9aed0312, 0x724a, 0x4209, { 0x86, 0x20, 0xf9, 0x3d, 0xe0, 0xbb, 0xd8, 0xfb } }  
-  # PMIC BMS VM 
+  # PMIC USB
+  gQcomPmicUsbProtocolGuid =            { 0x6adb9972, 0x83d, 0x4be4,  { 0xbb, 0x74, 0xc7, 0x25, 0xa7, 0x30, 0x61, 0x56 } }
+  # PMIC FG
+  gQcomPmicFgProtocolGuid =             { 0x9aed0312, 0x724a, 0x4209, { 0x86, 0x20, 0xf9, 0x3d, 0xe0, 0xbb, 0xd8, 0xfb } }
+  # PMIC BMS VM
   gQcomPmicBmsVmProtocolGuid =          { 0x89294760, 0xcbd3, 0x4daf, { 0xb9, 0xce, 0x66, 0x15, 0x64, 0xe8, 0x34, 0x28 } }
   # PMIC Coincell
   gQcomPmicCoincellProtocolGuid =       { 0x8b8d51f1, 0xced2, 0x4a70, { 0x8c, 0x32, 0x85, 0xc5, 0xc7, 0xf9, 0x8c, 0x4d } }
   # CHARGER Extended
-  gChargerExProtocolGuid =              { 0x6edc8a6d, 0x2663, 0x43cd, { 0x90, 0xff, 0x46, 0x21, 0xff, 0xd1, 0x0d, 0xf5 } } 
+  gChargerExProtocolGuid =              { 0x6edc8a6d, 0x2663, 0x43cd, { 0x90, 0xff, 0x46, 0x21, 0xff, 0xd1, 0x0d, 0xf5 } }
   # USB Power Ctrl
   gQcomUsbPwrCtrlProtocolGuid = 	    { 0xe07df17e, 0xe79e, 0x4150, { 0x93, 0x78, 0x50, 0x62, 0x3a, 0x14, 0x99, 0x4a } }
   # Sdcc RPMB
-  gEfiSdccRpmbProtocolGuid =            { 0xef6fd01d, 0x8861, 0x4132, { 0x83, 0x4e, 0xde, 0xcc, 0x0f, 0xf1, 0xaa, 0xfa } }  
-  # Sdcc HC Mode Enable 
+  gEfiSdccRpmbProtocolGuid =            { 0xef6fd01d, 0x8861, 0x4132, { 0x83, 0x4e, 0xde, 0xcc, 0x0f, 0xf1, 0xaa, 0xfa } }
+  # Sdcc HC Mode Enable
   gEfiSdccConfigProtocolGuid =          { 0x6C7567DF, 0x412B, 0x28E6, { 0xB6, 0xB6, 0xE2, 0x89, 0x81, 0x72, 0xFA, 0xBF } }
   # SD+UFS Card Info
   gEfiMemCardInfoProtocolGuid =         { 0x85c1f7d2, 0xbce6, 0x4f31, { 0x8f, 0x4d, 0xd3, 0x7e, 0x03, 0xd0, 0x5e, 0xaa } }
@@ -307,7 +303,7 @@
   # USB Init
   gEfiUsbInitProtocolGuid =             { 0x2da15ac7, 0x4909, 0x4c4c, { 0xb8, 0xc3, 0xa7, 0x42, 0x19, 0x5e, 0xa4, 0x6e } }
   # GUID for USB Charger Srv
-  gEfiUsbfnChgSrvProtocolGuid =         { 0xfddcf592, 0x1bb3, 0x41ba, { 0xa5, 0x33, 0xef, 0xe1, 0xe0, 0x0a, 0x5f, 0x53 } } 
+  gEfiUsbfnChgSrvProtocolGuid =         { 0xfddcf592, 0x1bb3, 0x41ba, { 0xa5, 0x33, 0xef, 0xe1, 0xe0, 0x0a, 0x5f, 0x53 } }
   # Dmov
   gEfiDmovProtocolGuid =                { 0x43fc9e5f, 0xa4ad, 0x4f90, { 0xb2, 0xee, 0xa3, 0x34, 0x26, 0x88, 0xd9, 0x87 } }
   # ChipInfo
@@ -322,7 +318,7 @@
   gEfiTrEEProtocolGuid =                { 0x607f766c, 0x7455, 0x42be, { 0x93, 0x0b, 0xe4, 0xd7, 0x6d, 0xb2, 0x72, 0x0f } }
   # ToolSupport
   gQcomToolSupportProtocolGuid =        { 0x16c46385, 0xb0c6, 0x4622, { 0x94, 0x20, 0xac, 0xb8, 0x34, 0x4c, 0x2b, 0x53 } }
-  # PE authentication 
+  # PE authentication
   gQcomAuthenticationProtocolGuid =     { 0x281f3880, 0xab97, 0x4096, { 0xa6, 0x40, 0xf8, 0x8a, 0x13, 0xd0, 0xab, 0x45 } }
   # TPM
   gEfiTpmProtocolGuid =                 { 0xb9be5350, 0xc6c5, 0x4fda, { 0x9b, 0x09, 0x55, 0x1f, 0xf0, 0x61, 0xc0, 0xba } }
@@ -334,21 +330,21 @@
   gEfiUsbMsdPeripheralProtocolGuid =    { 0xc8591faf, 0xdbcc, 0x479e, { 0x9e, 0xf2, 0xfd, 0x08, 0x5b, 0xc3, 0x7b, 0xc7 } }
   #PMIC Interrupts
   gQcomPmicInterruptProtocolGuid =      { 0xb7ecdba1, 0x280e, 0x4d2e, { 0x96, 0xa0, 0xba, 0x1e, 0xe1, 0x70, 0x60, 0x64 } }
-  #PMIC Mega XO 
+  #PMIC Mega XO
   gQcomPmicMegaXOProtocolGuid =         { 0x73b7051e, 0xf6ce, 0x485e, { 0xb2, 0x2e, 0x11, 0x73, 0x4c, 0x23, 0x43, 0x19 } }
   # Emmc Write Protection Protocol
   gEfiEmmcWpProtocolGuid =              { 0xd35dc019, 0x3eab, 0x4655, { 0xba, 0x9a, 0x73, 0x4a, 0x8d, 0x8b, 0x98, 0x47 } }
   #PMIC BMS
   gQcomPmicBmsProtocolGuid =            { 0xf1da9795, 0x0180, 0x4540, { 0xa6, 0xeb, 0x1f, 0xb2, 0x9f, 0xe0, 0xdc, 0x72 } }
-  #PMIC Vibrator Motor Protocol 
+  #PMIC Vibrator Motor Protocol
   gQcomPmicVibProtocolGuid =            { 0x1206365a, 0xe32c, 0x4173, { 0xb3, 0x25, 0x66, 0x33, 0xc5, 0xb7, 0xcb, 0x58 } }
   #PMIC WLED
   gQcomPmicWledProtocolGuid =           { 0x5bef7c41, 0xa560, 0x435b, { 0x83, 0x5b, 0x3c, 0x3e, 0xbf, 0x2b, 0xd1, 0x51 } }
   #Encryption
   gEfiEncryptionProtocolGuid =          { 0xf78552e0, 0xf751, 0x427f, { 0x94, 0x51, 0x93, 0xe, 0x60, 0xd8, 0x39, 0xb8 } }
-  #PMIC Power ON Protocol 
+  #PMIC Power ON Protocol
   gQcomPmicPwrOnProtocolGuid =          { 0x9ba45b66, 0xefa4, 0x441c, { 0xa3, 0xe4, 0xed, 0x22, 0x24, 0x78, 0x6b, 0xe2 } }
-  #PMIC PON Protocol 
+  #PMIC PON Protocol
   gQcomPmicPonProtocolGuid =            { 0x97044b58, 0xfea4, 0x4ad0, { 0x9d, 0xb, 0xe4, 0x17, 0xd6, 0xf, 0x11, 0xa1 } }
   #DPP
   gEfiDppProtocolGuid =                 { 0x42d430c0, 0xae55, 0x4a6c, { 0xa7, 0x95, 0xc6, 0x3e, 0x68, 0x7a, 0x15, 0x49 } }
@@ -358,27 +354,27 @@
   gEfiPartitionRecordGuid =             { 0xfe2555be, 0xd716, 0x4686, { 0xb9, 0xd0, 0x79, 0xdb, 0x59, 0x21, 0xb7, 0x0d } }
   # SPMI
   gQcomSPMIProtocolGuid =               { 0xfa5f306b, 0xf47d, 0x4ac4, { 0xa4, 0x7d, 0x88, 0x2f, 0x82, 0x4, 0xec, 0x30 } }
-  # PMIC CLK   
+  # PMIC CLK
   gQcomPmicClkBuffProtocolGuid =        { 0xdd940b86, 0x98ae, 0x4426, { 0x96, 0xbb, 0x6b, 0xaf, 0x49, 0x84, 0x9c, 0xd7 } }
-  # PMIC SMBB   
+  # PMIC SMBB
   gQcomPmicSmbbProtocolGuid =           { 0x76b95dad, 0x1e66, 0x4d98, { 0x9c, 0xe7, 0xb2, 0x94, 0xd9, 0x59, 0x68, 0x95 } }
   # PMIC LBC
   gQcomPmicLbcProtocolGuid =            { 0x4f6a83d, 0x52e6, 0x4355, { 0x99, 0x5b, 0x9f, 0xec, 0x46, 0xfb, 0x3b, 0xa2 } }
-  # PMIC SMBCHG   
+  # PMIC SMBCHG
   gQcomPmicSmbchgProtocolGuid =         { 0x2a774acb, 0x7260, 0x4d9a, { 0x91, 0x44, 0x65, 0x4a, 0xda, 0xd7, 0x9c, 0x80 } }
-  # PMIC SCHG 
-  gQcomPmicSchgProtocolGuid  =          { 0xae6ae96e, 0x483f, 0x42ae, { 0x9c, 0xc1, 0x9f, 0xac, 0x1b, 0x58, 0x47, 0x28 } } 
+  # PMIC SCHG
+  gQcomPmicSchgProtocolGuid  =          { 0xae6ae96e, 0x483f, 0x42ae, { 0x9c, 0xc1, 0x9f, 0xac, 0x1b, 0x58, 0x47, 0x28 } }
   #PMIC NPA Test For Testing NPA Clients
   gQcomPmicNpaTestProtocolGuid =        { 0xf4286061, 0x4326, 0x44b0, { 0x98, 0x93, 0xe7, 0x5c, 0xca, 0x36, 0x74, 0x5 } }
-  # PMIC IBB   
+  # PMIC IBB
   gQcomPmicIbbProtocolGuid =            { 0xc1bff82d, 0x6c92, 0x48fb, { 0x83, 0x55, 0xc7, 0xfb, 0x42, 0x18, 0xa4, 0xea } }
-  # PMIC LAB   
+  # PMIC LAB
   gQcomPmicLabProtocolGuid =            { 0xa966cc4f, 0xee6c, 0x424d, { 0xa7, 0x62, 0x8e, 0xd3, 0xb5, 0xa4, 0xa5, 0x1 } }
   # PMIC LCDB
   gQcomPmicLcdbProtocolGuid =           { 0xb7639e28, 0xc06b, 0x47f0, { 0x9a, 0x13, 0x35, 0xee, 0xba, 0x3b, 0x51, 0xf8 } }
   # PMIC OLEDB
   gQcomPmicOledbProtocolGuid =          { 0x55e2e265, 0xcdb2, 0x46df, { 0x88, 0xa5, 0x60, 0xb, 0xed, 0xef, 0x9c, 0x62 } }
-  # PMIC MIPI BIF   
+  # PMIC MIPI BIF
   gQcomPmicMipiBifProtocolGuid =        { 0x5266542e, 0xed66, 0x4b59, { 0x86, 0xd5, 0xa7, 0xfb, 0xe8, 0x35, 0x1f, 0xea } }
   # Sdcc Erase
   gEfiEmmcEraseProtocolGuid =           { 0x4e4c8b9b, 0x4470, 0x4d25, { 0xb0, 0xa1, 0xdb, 0xc2, 0x57, 0x29, 0x90, 0xb4 } }
@@ -388,14 +384,13 @@
   gQcomMpSchedProtocolGuid =            { 0x0f8d728e, 0x3c6c, 0x11e5, { 0xb8, 0xdc, 0x23, 0xdf, 0xe4, 0x87, 0x66, 0xbf } }
   # TSENS
   gEfiTsensProtocolGuid =               { 0xe8d644e6, 0x47ae, 0xda4e, { 0x9d, 0x3c, 0xda, 0xb8, 0x24, 0x30, 0xeb, 0xf8 } }
-  # SCM 
+  # SCM
   gQcomScmProtocolGuid     =            { 0x77ed108d, 0x8524, 0x4b8b, { 0x9d, 0x2e, 0x34, 0x98, 0x7a, 0xec, 0xb9, 0xc1 } }
-  # QSEECOM 
+  # QSEECOM
   gQcomQseecomProtocolGuid     =        { 0xa74862ce, 0x680f, 0x4fe1, { 0xa3, 0x11, 0xdf, 0x41, 0xf4, 0x3, 0x3, 0x91 } }
   # ASN1X509
-
   gEfiQcomASN1X509ProtocolGuid  =       { 0x408ec123, 0x134e, 0x4b80, { 0x91, 0x42, 0xb8, 0x9a, 0xe, 0x08, 0xf8, 0xb3 } }
-  # VerifiedBoot 
+  # VerifiedBoot
   gEfiQcomVerifiedBootProtocolGuid =       { 0x8e5eff91, 0x21b6, 0x47d3, { 0xaf, 0x2b, 0xc1, 0x5a, 0x1, 0xe0, 0x20, 0xec } }
   # SecRSA
   gEfiQcomSecRSAProtocolGuid =         { 0xeb7a442a, 0xcef4, 0x40a7, {0xa8, 0xae, 0x5a, 0x2e, 0x7f, 0x48, 0xe1, 0x72 } }
@@ -407,16 +402,16 @@
   gQcomPmicPwmProtocolGuid =            { 0xe08051ae, 0xac38, 0x46db, { 0xa6, 0x96, 0xc5, 0x69, 0x52, 0xb0, 0x56, 0x16 } }
   # Capsule
   gEfiCapsuleProtocolGuid =             { 0xbfafad65, 0x4acc, 0x5eeb, { 0x28, 0x6a, 0xd5, 0x9f, 0x55, 0x49, 0x62, 0xf6 } }
-  # Display Power Control  
+  # Display Power Control
   gQcomDisplayPwrCtrlProtocolGuid =     { 0x7bfa4293, 0x7aa4, 0x4375, { 0xb6, 0x3c, 0xb6, 0xaa, 0xb7, 0x86, 0xc4, 0x3c } }
-  # Display Power 
+  # Display Power
   gEfiDisplayPowerStateProtocolGuid =   { 0xf352021d, 0x9593, 0x4432, { 0xbf, 0x04, 0x67, 0xb9, 0xf3, 0xb7, 0x60, 0x08 } }
   # Display Utils Protocol
   gQcomDisplayUtilsProtocolGuid =       { 0xc0dd69ac, 0x76ba, 0x11e6, { 0xab, 0x24, 0x1f, 0xc7, 0xf5, 0x57, 0x5f, 0x19 } }
   # Qcom Debug
   gEfiQcomDebugProtocolGuid =           { 0x6d3a7f58, 0x41ac, 0x3f49, { 0xdb, 0xb5, 0xc2, 0x85, 0xfb, 0x02, 0x7e, 0xb9 } }
   # PMIC RGB LED
-  gQcomPmicRgbLedProtocolGuid =         { 0x3ccead8e, 0xb24c, 0x403b, { 0xa0, 0xb2, 0xfd, 0x4c, 0x56, 0xb4, 0x6c, 0x9f } } 
+  gQcomPmicRgbLedProtocolGuid =         { 0x3ccead8e, 0xb24c, 0x403b, { 0xa0, 0xb2, 0xfd, 0x4c, 0x56, 0xb4, 0x6c, 0x9f } }
   # NPA
   gEfiNpaProtocolGuid             =     { 0x79d6c870, 0x725e, 0x489e, { 0xa0, 0xa1, 0x27, 0xe7, 0xa5, 0xd0, 0xcb, 0x35 } }
   # RPM Services: RPM-related services provided by NpaDxe
@@ -428,7 +423,7 @@
   # ULog
   gEfiULogProtocolGuid            =     { 0x93a824b1, 0xf77c, 0x4880, { 0xad, 0x95, 0xe7, 0xbc, 0x63, 0x4f, 0x90, 0x51 } }
   # PMIC VERSION
-  gQcomPmicVersionProtocolGuid =        { 0x4684800a, 0x2755, 0x4edc, { 0xb4, 0x43, 0x7f, 0x8c, 0xeb, 0x32, 0x39, 0xd3 } } 
+  gQcomPmicVersionProtocolGuid =        { 0x4684800a, 0x2755, 0x4edc, { 0xb4, 0x43, 0x7f, 0x8c, 0xeb, 0x32, 0x39, 0xd3 } }
   # Adapter information
   gAdapterInformationProtocolGuid =     { 0xE5DD1403, 0xD622, 0xC24E, { 0x84, 0x88, 0xC7, 0x1B, 0x17, 0xF5, 0xE8, 0x02 } }
   # Adapter information Register
@@ -470,46 +465,16 @@
 
   # UEFI PIL
   gEfiPilProtocolGuid = 				{ 0x1f4f1da3, 0x4d8d, 0x4894, { 0xba, 0x2a, 0x13, 0xd3, 0x20, 0x7f, 0x97, 0x39 } }
-  
+
   # 32bit mode switch
   gQcomScmModeSwithProtocolGuid =       { 0xf57f73ed, 0x0afc, 0x4723, { 0x93, 0x74, 0x2c, 0xeb, 0xc0, 0x19, 0x8e, 0xf9 } }
-  
+
+
+
 [PcdsFixedAtBuild.common]
-  # Interrupts and Timers
-  gQcomTokenSpaceGuid.PcdTimerDxeDebug|FALSE|BOOLEAN|0x99
-  gQcomTokenSpaceGuid.PcdInterruptTimerIndex|0|UINT32|0x00000100
-  gQcomTokenSpaceGuid.PcdTimer1IRQ|0x11|UINT32|0x00000101
-  gQcomTokenSpaceGuid.PcdQGICCBaseAddress|0x00000000|UINT32|0x00000102
-  gQcomTokenSpaceGuid.GSBIPorts|12|UINT32|0x00000103
-  gQcomTokenSpaceGuid.PcdTimerGPT0Index|0|UINT32|0x00000104
-  gQcomTokenSpaceGuid.PcdTimerGPT0Freq|32768|UINT32|0x00000105
-  gQcomTokenSpaceGuid.PcdTimerGPT1Index|1|UINT32|0x00000106
-  gQcomTokenSpaceGuid.PcdTimerGPT1Freq|32768|UINT32|0x00000107
-  gQcomTokenSpaceGuid.PcdTimerADGTIndex|2|UINT32|0x00000108
-  gQcomTokenSpaceGuid.PcdTimerADGTFreq|27000000|UINT32|0x00000109
-  gQcomTokenSpaceGuid.PcdInterruptVectorGPT0|17|UINT32|0x0000010A
-  gQcomTokenSpaceGuid.PcdInterruptVectorGPT1|18|UINT32|0x0000010B
-  gQcomTokenSpaceGuid.PcdPerfomanceCounterStart|0x00000000|UINT64|0x0000010C
-  gQcomTokenSpaceGuid.PcdPerfomanceCounterEnd|0xFFFFFFFF|UINT64|0x0000010D
-  gQcomTokenSpaceGuid.PcdInterruptVectorDGT|16|UINT32|0x0000010E
-  gQcomTokenSpaceGuid.PcdInterruptTimerPeriod|100000|UINT32|0x0000010F
-  gQcomTokenSpaceGuid.PcdPerformanceCounterIndex|2|UINT32|0x00000110
-  gQcomTokenSpaceGuid.PcdAppsProcFrequencyMhz|918|UINT32|0x00000111
-  gQcomTokenSpaceGuid.PcdPerformanceInterrupt|0x0|UINT32|0x0000011B
-
-  #MPM_SLEEP_TIMETICK_COUNT_VAL for time from power on
-  gQcomTokenSpaceGuid.PcdTimeTickClkAddress|0x00200024|UINT32|0x00000112
-
-  gQcomTokenSpaceGuid.PcdQTimerAC_BasePhys|0x0|UINT32|0x00000113
-  gQcomTokenSpaceGuid.PcdQTimerV1BasePhys|0x0|UINT32|0x00000114
-  gQcomTokenSpaceGuid.PcdQTimerV2BasePhys|0x0|UINT32|0x00000115
-  gQcomTokenSpaceGuid.PcdQTimerFrame|0|UINT32|0x00000116
-  gQcomTokenSpaceGuid.PcdQTimerEnabled|0|UINT32|0x00000117
-  gQcomTokenSpaceGuid.PcdTimerTestClockFreq|918000000|UINT32|0x00000118
-  gQcomTokenSpaceGuid.PcdTimerTestClockFreqDiv|64|UINT32|0x00000119
-
-  gQcomTokenSpaceGuid.PcdBuildType|0x0|UINT32|0x0000011A
-
+  # Memory allocation
+  gQcomTokenSpaceGuid.PcdUefiMemPoolBase|0|UINT64|0x00000a106
+  gQcomTokenSpaceGuid.PcdUefiMemPoolSize|0|UINT32|0x00000a107
   # Memory map
   gQcomTokenSpaceGuid.PcdMemoryBase|0x00000000|UINT64|0x00000317
   gQcomTokenSpaceGuid.PcdMemorySize|0x00000000|UINT64|0x00000318
@@ -522,8 +487,6 @@
   gQcomTokenSpaceGuid.PcdSmemBaseAddress|0x40000000|UINT64|0x00001330
   gQcomTokenSpaceGuid.PcdSmemSize|0x00100000|UINT64|0x00000331
   gQcomTokenSpaceGuid.PcdSmemInformation|0x00000000|UINT32|0x00001332
-  gQcomTokenSpaceGuid.PcdUefiMemPoolBaseOffset|0x016C0000|UINT32|0x00000335
-  gQcomTokenSpaceGuid.PcdUefiMemPoolSize|0x03000000|UINT32|0x00000336
   gQcomTokenSpaceGuid.PcdMpParkCodeBaseOffset|0x00300000|UINT32|0x00000337
   ## TODO: PcdMpParkCodeBase needs to be cleaned up pending APQ8064
   gQcomTokenSpaceGuid.PcdMpParkCodeSize|0x00100000|UINT32|0x00000338
@@ -551,47 +514,51 @@
   gEmbeddedTokenSpaceGuid.PcdEmbeddedAutomaticBootCommand|L""|VOID*|0x00000007
   gEmbeddedTokenSpaceGuid.PcdEmbeddedDefaultTextColor|0x07|UINT32|0x00000008
   gEmbeddedTokenSpaceGuid.PcdEmbeddedMemVariableStoreSize|0x10000|UINT32|0x00000009
-  gEmbeddedTokenSpaceGuid.PcdFlashFvMainBase|0x0|UINT64|0x00000043
-  gEmbeddedTokenSpaceGuid.PcdFlashFvMainSize|0x0|UINT64|0x00000045
-  
-
-  gQcomTokenSpaceGuid.PcdIMemCookiesBase|0x2A03F000|UINT32|0x00000385
-  gQcomTokenSpaceGuid.PcdIMemCookiesSize|0x00001000|UINT32|0x00000386
-  gQcomTokenSpaceGuid.PcdUefiInfoBlockOffset|0x00189000|UINT32|0x00000389
-  gQcomTokenSpaceGuid.PcdIMemDebugConfigOffset|0x30|UINT32|0x0000038A
-  # UEFI cookie
-  gQcomTokenSpaceGuid.PcdUefiDebugCookieOffset|0|UINT64|0x00000390
-  gQcomTokenSpaceGuid.PcdUefiDebugCookie|0|UINT32|0x00000391
-
-  # RTC
-  gQcomTokenSpaceGuid.PcdRealTimeClockResolution|0|UINT32|0x00000400
-  gQcomTokenSpaceGuid.PcdRealTimeClockAccuracy|0|UINT32|0x00000401
-  gQcomTokenSpaceGuid.PcdRealTimeClockSetToZero|0|UINT32|0x00000402
-
-  # I2C EEPROM
-  gQcomTokenSpaceGuid.EEPROMI2CCore|12|UINT32|0x00000500
-  gQcomTokenSpaceGuid.EEPROMI2CByteTransferWaitTime|20000|UINT32|0x00000501
-  gQcomTokenSpaceGuid.EEPROMSlaveAddress|0x50|UINT32|0x00000502
-  gQcomTokenSpaceGuid.EEPROMWriteCycleTime|5000|UINT32|0x00000503
-  gQcomTokenSpaceGuid.EEPROMPageSize|64|UINT32|0x00000504
-  gQcomTokenSpaceGuid.EEPROMNumPages|256|UINT32|0x00000505
-
-  # SPMI
-  gQcomTokenSpaceGuid.SPMIBasePhysical0|0|UINT32|0x00000506
-  gQcomTokenSpaceGuid.SPMIBasePhysical1|0|UINT32|0x00000507
-  gQcomTokenSpaceGuid.SPMIMemoryMapSize|0x0|UINT32|0x00000508
-  gQcomTokenSpaceGuid.SPMIOwner|0|UINT32|0x00000509
-  gQcomTokenSpaceGuid.SPMIDebugChannel|1|UINT32|0x00000510
-
-  # SPMI PON
-  gQcomTokenSpaceGuid.SPMIPOnID|0|UINT32|0x00000511
-  gQcomTokenSpaceGuid.SPMIPOnTypeReg|0x0804|UINT32|0x00000512
-  gQcomTokenSpaceGuid.SPMIPOnType|0x0401|UINT32|0x00000513
-  gQcomTokenSpaceGuid.SPMIPOnWriteReg|0x081A|UINT32|0x00000514
-
-  # SPI Loopback
-  gQcomTokenSpaceGuid.SPILoopbackCore|1|UINT32|0x00000520
-
+  # Simple FrameBuffer
+  gQcomTokenSpaceGuid.PcdMipiFrameBufferAddress|0x00400000|UINT32|0x0000a400
+  gQcomTokenSpaceGuid.PcdMipiFrameBufferWidth|1080|UINT32|0x0000a401
+  gQcomTokenSpaceGuid.PcdMipiFrameBufferHeight|2160|UINT32|0x0000a402
+  gQcomTokenSpaceGuid.PcdMipiFrameBufferPixelBpp|32|UINT32|0x0000a403
+  gQcomTokenSpaceGuid.PcdMipiFrameBufferVisibleWidth|1080|UINT32|0x0000a404
+  gQcomTokenSpaceGuid.PcdMipiFrameBufferVisibleHeight|2160|UINT32|0x0000a405
+  # Touch Screen
+  gQcomTokenSpaceGuid.PcdTouchCtlrAddress|0|UINT16|0x0000a501
+  gQcomTokenSpaceGuid.PcdTouchCtlrResetPin|0|UINT32|0x0000a502
+  gQcomTokenSpaceGuid.PcdTouchCtlrVregPin|0|UINT32|0x0000a503
+  gQcomTokenSpaceGuid.PcdTouchCtlrIntPin|0|UINT32|0x0000a504
+  gQcomTokenSpaceGuid.PcdTouchCtlrI2cDevice|0|UINT32|0x0000a505
+  gQcomTokenSpaceGuid.PcdTouchMinX|0|UINT32|0x0000a506
+  gQcomTokenSpaceGuid.PcdTouchMaxX|0|UINT32|0x0000a507
+  gQcomTokenSpaceGuid.PcdTouchInvertedX|FALSE|BOOLEAN|0x0000a508
+  gQcomTokenSpaceGuid.PcdTouchMinY|0|UINT32|0x0000a509
+  gQcomTokenSpaceGuid.PcdTouchMaxY|0|UINT32|0x0000a50a
+  gQcomTokenSpaceGuid.PcdTouchInvertedY|FALSE|BOOLEAN|0x0000a50b
+  gQcomTokenSpaceGuid.PcdTouchCtlrVddPin|0|UINT32|0x0000a50c
+  gQcomTokenSpaceGuid.PcdTouchCtlrVddIoPin|0|UINT32|0x0000a50d
+  gQcomTokenSpaceGuid.PcdTouchCtlrVddPinActiveLow|FALSE|BOOLEAN|0x0000a50e
+  # USB
+  gQcomTokenSpaceGuid.DWC3MaxSpeed|7|UINT8|0xE04
+  gQcomTokenSpaceGuid.InitUsbControllerOnBoot|TRUE|BOOLEAN|0xE05
+  gQcomTokenSpaceGuid.HostModeSupported|TRUE|BOOLEAN|0xE06
+  gQcomTokenSpaceGuid.PcdUsbManufacturerStr|L"Qualcomm Technologies, Inc."|VOID*|0xE07
+  gQcomTokenSpaceGuid.PcdUsbProductStr|L"Qualcomm MSM Device"|VOID*|0xE08
+  gQcomTokenSpaceGuid.HighSpeedOnlySupported|FALSE|BOOLEAN|0xE09
+  gQcomTokenSpaceGuid.USBSmmuStage1Supported|TRUE|BOOLEAN|0xE0A
+  # RTC information
+  gQcomTokenSpaceGuid.PcdBootShimInfo1|0xb0000000|UINT64|0x00000a601
+  # Hall sensor gpio settings
+  gQcomTokenSpaceGuid.PcdHallSensorPin|0|UINT32|0x00000a602
+  gQcomTokenSpaceGuid.PcdHallSensorActiveLow|TRUE|BOOLEAN|0x00000a603
+  gQcomTokenSpaceGuid.PcdLinuxUtilsCheckHallOnly|FALSE|BOOLEAN|0x00000a604
+  # Debug UART settings
+  gQcomTokenSpaceGuid.PcdDebugUartPortBase|0xa84000|UINT64|0x00000a701
+  # Miscellaneous
+  gQcomTokenSpaceGuid.PcdEDLCookie0|0x322A4F99|UINT32|0x0000B06
+  gQcomTokenSpaceGuid.PcdEDLCookie1|0xC67E4350|UINT32|0x0000B07
+  gQcomTokenSpaceGuid.PcdEDLCookie2|0x77777777|UINT32|0x0000B08
+  gQcomTokenSpaceGuid.PcdEDLCookieSize|12|UINT32|0x00000B09
+  gQcomTokenSpaceGuid.PcdEDLCookieAddr|0x066BFFE0|UINT32|0x00000B0A
+  gQcomTokenSpaceGuid.PcdUEFIMassStorageEnabled|TRUE|BOOLEAN|0x0000B0B
   # SDCC
   gQcomTokenSpaceGuid.SDCCExtSlotNumber|2|UINT32|0x00000600
   gQcomTokenSpaceGuid.SDCCEmmcSlotNumber|0|UINT32|0x00000601
@@ -603,208 +570,3 @@
   gQcomTokenSpaceGuid.SDCCSdhciEnable|TRUE|BOOLEAN|0x00000608
   gQcomTokenSpaceGuid.SDCCEmmcSpeedMode|3|UINT32|0x00000609
   gQcomTokenSpaceGuid.SDCCRegBase|"unknown"|VOID*|0x00000700
-
-  # SATA
-  gQcomTokenSpaceGuid.SATASpeedGen|0|UINT32|0x00000701   
- 
-  # Display
-
-  # PcdPanelType Values
-  # 0x00 = AutoDetect 
-  # 0x01 = PanelTypeOEM 
-  gQcomTokenSpaceGuid.PcdPanelType|0|UINT32|0x00000800
-
-  # Indicates the time (in milliseconds) to poll to check for HDMI connection  
-  gQcomTokenSpaceGuid.PcdHPDPollCount|200|UINT32|0x00000801
-
-  # Default backlight level in percentage (1-100%)
-  gQcomTokenSpaceGuid.PcdBacklightLevel|60|UINT32|0x00000802
-
-  # PCD to enable/disable SW renderer mode
-  gQcomTokenSpaceGuid.PcdDisplayForceSwRenderer|FALSE|BOOLEAN|0x00000803
-
-  # PCD to limit FB allocation by resolution.
-  # See gFBResLimit Table,  0 : 4k, 1 : UHD, 2 : WQHD, 3: FHD, 4: HD
-  gQcomTokenSpaceGuid.PcdFrameBufMaxRes|0|UINT32|0x00000804
-
-  # PCD to set primary flags
-  gQcomTokenSpaceGuid.PcdPrimaryFlags|0|UINT32|0x00000805
-
-  # PCD to set reserved memory size in MByte
-  gQcomTokenSpaceGuid.PcdReservedMemorySize|0|UINT32|0x00000806
-
-  # PCD to set reserved memory alignment in Kbyte
-  gQcomTokenSpaceGuid.PcdReservedMemoryAlignment|0|UINT32|0x00000807
-
-  # PCD to set underflow color in RRGGBBAA format
-  gQcomTokenSpaceGuid.PcdUnderflowColor|0|UINT32|0x00000808
- 
-  # PCD to set External display type:  0: No external display, 1: DisplayPort, 2: HDMI
-  gQcomTokenSpaceGuid.PcdExtDisplayType|0|UINT32|0x00000809
-  
-  # PCD to set External display mode Index : 0: Preferred mode, 1: Largest mode
-  gQcomTokenSpaceGuid.PcdSetExtMode|0|UINT32|0x0000080A
-
- # PCD to set default GOP render mode 0: Letterbox to screen  1: Fit to screen 2: Crop to fit
-  gQcomTokenSpaceGuid.PcdPresentationMode|0|UINT32|0x0000080B
-
-  
-  # Disable debug log
-  # Indicates the address to check for Magic DebugLog Override 
-  gQcomTokenSpaceGuid.PcdDebugLogOverrideAddress|0|UINT32|0x00000850
-  # Indicates the Magic value that indicates DebugLog Override   
-  gQcomTokenSpaceGuid.PcdDebugLogOverrideMagic|0|UINT32|0x00000851
-
-  # 
-  # SMBIOS related
-  #
-  gQcomTokenSpaceGuid.PcdProcessorInfoSockInfoStr|"Qualcomm"|VOID*|0xC00
-  # Following can be changed by OEM's as it suits their products
-  gQcomTokenSpaceGuid.PcdSystemMfrStr|"Qualcomm's OEM"|VOID*|0xC01
-  gQcomTokenSpaceGuid.PcdSystemProductNameStr|"Phone/Tablet Product"|VOID*|0xC02
-  gQcomTokenSpaceGuid.PcdSystemProductFamilyStr|"Product Family"|VOID*|0xC03
-
-  # ACPI
-  gQcomTokenSpaceGuid.PcdAcpiFolderPath|"fs0:\\ACPI\\"|VOID*|0x00000900
-
-  ## ACPI related 
-  gEfiMdeModulePkgTokenSpaceGuid.PcdAcpiDefaultOemId|"QCOM  "|VOID*|0x00000901
-  #Signature_64('Q','C','O','M','E','D','K','2') = 0x324B44454D4F4351 = '2','K','D','E','M','O','C','Q'
-  gEfiMdeModulePkgTokenSpaceGuid.PcdAcpiDefaultOemTableId|0x324B44454D4F4351|UINT64|0x00000902
-  gEfiMdeModulePkgTokenSpaceGuid.PcdAcpiDefaultOemRevision|0x00000001|UINT32|0x00000903
-  #Signature_32('Q', 'C', 'O', 'M') = 0x4D4F4351
-  gEfiMdeModulePkgTokenSpaceGuid.PcdAcpiDefaultCreatorId|0x4D4F4351|UINT32|0x00000904
-  gEfiMdeModulePkgTokenSpaceGuid.PcdAcpiDefaultCreatorRevision|0x00000001|UINT32|0x00000905
-
-  # OS Config
-  gQcomTokenSpaceGuid.PcdOSConfigItem0|L"hal.dll"|VOID*|0x00000A00
-  gQcomTokenSpaceGuid.PcdOSConfigItem1|L"kdqct.dll"|VOID*|0x00000A01
-
-  # Power Button Forced Shutdown 
-  gQcomTokenSpaceGuid.PcdPwrBtnShutdownFlag|"PwrBtnShutdownFlag"|VOID*|0x00000922
-  
-  gQcomTokenSpaceGuid.PcdEDLCookie0|0x322A4F99|UINT32|0x0000B06
-  gQcomTokenSpaceGuid.PcdEDLCookie1|0xC67E4350|UINT32|0x0000B07
-  gQcomTokenSpaceGuid.PcdEDLCookie2|0x77777777|UINT32|0x0000B08
-  gQcomTokenSpaceGuid.PcdEDLCookieSize|12|UINT32|0x00000B09
-  gQcomTokenSpaceGuid.PcdEDLCookieAddr|0x066BFFE0|UINT32|0x00000B0A
-  gQcomTokenSpaceGuid.PcdUEFIMassStorageEnabled|TRUE|BOOLEAN|0x0000B0B
-  
-  #Pointer to struct of ScatterGatherList pointers (used for UpdateCapsule)
-  gQcomTokenSpaceGuid.PcdScatterGatherHeaderAddr|0x803E0000|UINT32|0x00000B03
-  
-
-  ## Indicates platform type
-  #QCOM_PLAT_INVALID = 0x00 QCOM_PLAT_SURF_FFA = 0x01 QCOM_PLAT_QRDC = 0x02 QCOM_PLAT_FLUID = 0x03
-  gQcomTokenSpaceGuid.PcdPlatformType|0x0|UINT32|0x4
-
-  # OS Arch Timer & MPM sync related
-  gQcomTokenSpaceGuid.PcdSyncTimerToMPP|FALSE|BOOLEAN|0xD01
-  gQcomTokenSpaceGuid.PcdMpmCntrRegAddr|0x00200024|UINT32|0xD02
-  gQcomTokenSpaceGuid.PcdGPTCntrRegAddr|0x0200A000|UINT32|0xD03
-  gQcomTokenSpaceGuid.PcdOSArchTimer|0x0|UINT32|0xD04
-
-  # UART
-  gQcomTokenSpaceGuid.UartPlatform|"unknown"|VOID*|0xE01
-
-  # USB
-  gQcomTokenSpaceGuid.DWC3MaxSpeed|7|UINT8|0xE04
-  gQcomTokenSpaceGuid.InitUsbControllerOnBoot|TRUE|BOOLEAN|0xE05
-  gQcomTokenSpaceGuid.HostModeSupported|TRUE|BOOLEAN|0xE06
-  gQcomTokenSpaceGuid.PcdUsbManufacturerStr|L"Qualcomm Technologies, Inc."|VOID*|0xE07
-  gQcomTokenSpaceGuid.PcdUsbProductStr|L"Qualcomm MSM Device"|VOID*|0xE08
-  gQcomTokenSpaceGuid.HighSpeedOnlySupported|FALSE|BOOLEAN|0xE09
-  gQcomTokenSpaceGuid.USBSmmuStage1Supported|TRUE|BOOLEAN|0xE0A
-
-  # Version info needed on LCD Display?
-  gQcomTokenSpaceGuid.VersionDisplay|TRUE|BOOLEAN|0xE02
-
-  # Override write protection feature
-  gQcomTokenSpaceGuid.DisableWriteProtect|FALSE|BOOLEAN|0xE03
-
-  # Hard/Warm Reset
-  gQcomTokenSpaceGuid.PcdUefiHardResetConfigure|FALSE|BOOLEAN|0x00000F04 
-  gQcomTokenSpaceGuid.PcdUefiWarmResetConfigure|FALSE|BOOLEAN|0x00000F05
-  gQcomTokenSpaceGuid.PcdUefiHardResetEnabled|FALSE|BOOLEAN|0x00000F06
-  gQcomTokenSpaceGuid.PcdUefiWarmResetEnabled|FALSE|BOOLEAN|0x00000F07
-  gQcomTokenSpaceGuid.PcdPsHoldAddress|0x0|UINT32|0x00000F08
-  
-  # PON Debounce
-  gQcomTokenSpaceGuid.PcdPONDebounce|0x00000000|UINT32|0x00000F09
-
-  # ChargerTaskSupported
-  gQcomTokenSpaceGuid.PcdChargerTaskSupported|FALSE|BOOLEAN|0x00002200
-  ## Error Code for SetVariable failure.<BR><BR>
-  #  EDKII_ERROR_CODE_SET_VARIABLE  = (EFI_SOFTWARE_DXE_BS_DRIVER | (EFI_OEM_SPECIFIC | 0x000000A5)) = 0x030580A5<BR>
-  # @Prompt Error Code for SetVariable failure.
-  # @ValidList  0x80000006 | 0x03058002
-  gQcomTokenSpaceGuid.PcdLpm|0x030580A5|UINT32|0x00002201
-
-  # Charger/Battery Default Values
-  gQcomTokenSpaceGuid.PcdBatteryTemperatureLimitLow|0|UINT32|0x00002300
-  gQcomTokenSpaceGuid.PcdBatteryTemperatureLimitHigh|45|UINT32|0x00002301
-  gQcomTokenSpaceGuid.PcdBatteryIDLimitLow|680|UINT32|0x00002302
-  gQcomTokenSpaceGuid.PcdBatteryIDLimitHigh|780|UINT32|0x00002303
-  gQcomTokenSpaceGuid.PcdBatteryVoltageLimitHighInmV|4300|UINT32|0x00002304
-  gQcomTokenSpaceGuid.PcdBatteryRbattWPInmOhms|170|UINT32|0x00002305
-  gQcomTokenSpaceGuid.PcdBatteryRbattWAInmOhms|120|UINT32|0x00002306
-  gQcomTokenSpaceGuid.PcdBmsITestInmA|2500|UINT32|0x00002307
-  gQcomTokenSpaceGuid.PcdBmsVFailureInuV|2500000|UINT32|0x00002308
-  gQcomTokenSpaceGuid.PcdChargerRsenseInuOhms|10000|UINT32|0x00002309
-  gQcomTokenSpaceGuid.PcdBadBatteryShutdown|FALSE|BOOLEAN|0x00002310
-  gQcomTokenSpaceGuid.PcdBatteryCurrentLimitHighInmA|1500|UINT32|0x0000230A
-  gQcomTokenSpaceGuid.PcdChargerVddSafeInmV|4225|UINT32|0x0000230B
-  gQcomTokenSpaceGuid.PcdChargerIbatSafeInmA|1500|UINT32|0x0000230C
-  gQcomTokenSpaceGuid.PcdChargerVddMaxInmV|4200|UINT32|0x0000230D #Set to zero if VDD_MAX needs to be configured dynamically by API
-  gQcomTokenSpaceGuid.PcdChargerIbatMaxInmA|1500|UINT32|0x0000230E #Set to zero if IBAT_MAX needs to be configured dynamically by API
-
-  # ISLChargerSupported
-  gQcomTokenSpaceGuid.PcdISL9519ChargerSupported|FALSE|BOOLEAN|0x00003000
-
-  # Read Battery Profile From Partition
-  gQcomTokenSpaceGuid.PcdReadBatteryProfileFromPartition|TRUE|BOOLEAN|0x00002400
-
-  # STMicro QiNEMO Firmware Updater Driver
-  gQcomTokenSpaceGuid.SensorI2CFrequencyKHz|100|UINT32|0x00002500
-  gQcomTokenSpaceGuid.SensorI2CByteTransferWaitTimeUs|160000|UINT32|0x00002501
-  gQcomTokenSpaceGuid.SensorI2CCoreQiNEMO|3|UINT32|0x00002502
-  gQcomTokenSpaceGuid.SensorSlaveAddressQiNEMO|0x41|UINT32|0x00002503
-  gQcomTokenSpaceGuid.SensorInterruptPinQiNEMO|66|UINT32|0x00002504
-  gQcomTokenSpaceGuid.SensorResetPinQiNEMO|64|UINT32|0x00002505
-  gQcomTokenSpaceGuid.SensorConfigureMPU6050|TRUE|BOOLEAN|0x00002506
-  gQcomTokenSpaceGuid.SensorI2CCoreMPU6050|12|UINT32|0x00002507
-  gQcomTokenSpaceGuid.SensorSlaveAddressMPU6050|0x68|UINT32|0x00002508
-
-  gQcomTokenSpaceGuid.PcdMaxMemory|0x00000000|UINT64|0x0000250B
-
-  # Controls which EL to switch into if Core is entered in EL3
-  gQcomTokenSpaceGuid.PcdSwitchToEL1|FALSE|BOOLEAN|0x00002600
-
-  # LinuxLoaderCommon
-  gQcomTokenSpaceGuid.KernelLoadAddress|0x00080000|UINT32|0x00015000
-  gQcomTokenSpaceGuid.TagsAddress|0x01E00000|UINT32|0x00015001
-  gQcomTokenSpaceGuid.RamdiskLoadAddress|0x02000000|UINT32|0x00015002
-
-  gArmTokenSpaceGuid.PcdArmPsciSupport|FALSE|BOOLEAN|0x00015003
-  gArmTokenSpaceGuid.PcdSystemMemoryBase|0|UINT32|0x00015004
-  
-  # Checking if fuses are blown before booting past Sec
-  gQcomTokenSpaceGuid.PcdHaltOnRetail|FALSE|BOOLEAN|0x00015005
-
-  gQcomTokenSpaceGuid.PcdBootVariableStoreSize|0x2000|UINT32|0x00016000
-
-[PcdsFeatureFlag.common]
-  # DMOV
-  gQcomTokenSpaceGuid.PcdDmovSupportedDevicesADM0|TRUE|BOOLEAN|0x00001000
-  gQcomTokenSpaceGuid.PcdDmovSupportedDevicesADM1|FALSE|BOOLEAN|0x00001001
-
-  # System Resource Memory
-  gQcomTokenSpaceGuid.PcdSingleDDRSystemResource|FALSE|BOOLEAN|0x00001002
-
-  # I2C Touch Screen
-  gQcomTokenSpaceGuid.TSI2CCore|2|UINT32|0x00002401
-  gQcomTokenSpaceGuid.TSI2CByteTransferWaitTime|300000|UINT32|0x00002402
-  gQcomTokenSpaceGuid.TSSlaveAddress|0x26|UINT32|0x00002403
-  gQcomTokenSpaceGuid.TSWriteCycleTime|5000|UINT32|0x00002404
-  gQcomTokenSpaceGuid.TSAppModeSlaveAddress|0x4A|UINT32|0x00002405
-
